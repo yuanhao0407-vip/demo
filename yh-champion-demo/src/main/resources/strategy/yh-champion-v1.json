@@ -1,0 +1,47 @@
+﻿{
+  "version": "yh-champion-v1",
+  "routeBiases": {
+    "ROAD#CLEAR": 22,
+    "ROAD#HEAVY_RAIN": 16,
+    "WATER#CLEAR": 9,
+    "WATER#HEAVY_RAIN": -32,
+    "MOUNTAIN#CLEAR": -2,
+    "MOUNTAIN#MOUNTAIN_FOG": -28
+  },
+  "taskBonuses": {
+    "STATION_PROCESS": 10,
+    "PASS_NODE": 9,
+    "CLEAR_OBSTACLE": 8,
+    "PERMIT_PROCESS": 11,
+    "FRESHNESS_CHECK": 22,
+    "DELIVER_FRESHNESS_CHECK": 24,
+    "CLAIM_TASK": 18,
+    "WIN_RESOURCE_WINDOW": 16,
+    "WIN_HORSE_WINDOW": 18,
+    "WIN_DOCK_WINDOW": 14,
+    "RUSH_VERIFY_GATE": 26
+  },
+  "intentBiases": {
+    "FAST_DELIVERY": 22,
+    "FRESH_DELIVERY": 20,
+    "RESOURCE_CONTROL": 16,
+    "TASK_CAP_PUSH": 21,
+    "BOUNTY_CHASE": 12,
+    "GUARD_PRESSURE": 14,
+    "CONTEST_DOMINANCE": 18,
+    "RUSH_COMEBACK": 28,
+    "LEAD_PROTECT": 30
+  },
+  "thresholds": {
+    "preGateRushSpeedMinDistance": 24,
+    "staggerGateVerifyWithBreakOrder": 1
+  },
+  "contestCards": {
+    "GATE": ["BING_ZHENG", "XIAN_GONG", "BING_ZHENG"],
+    "RESOURCE": ["YAN_DIE", "QIANG_XING", "BING_ZHENG"],
+    "TASK": ["XIAN_GONG", "BING_ZHENG", "YAN_DIE"],
+    "PASS": ["BING_ZHENG", "YAN_DIE", "QIANG_XING"],
+    "DOCK": ["QIANG_XING", "YAN_DIE", "XIAN_GONG"]
+  },
+  "breakOrderContestTypes": ["GATE"]
+}

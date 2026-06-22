@@ -1,0 +1,40 @@
+﻿demoId: YH-champion-planner
+displayName: 冠军强化型
+persona: 基于 D01-D20 全量表现融合任务高分、窗口压制、后程冲刺和稳交付的参赛级强 bot
+
+focusRules:
+  - CLAIM_TASK
+  - DELIVER
+  - WINDOW_CONTEST
+  - RUSH_SPEED
+  - USE_RESOURCE
+  - BREAK_GUARD
+
+artifactId: yh-champion-demo
+mainClass: com.huawei.game.demo.yhchampion.YhChampionClientApplication
+runCommand: ./start.sh 6 127.0.0.1 30000
+
+defaultPlayerId: 6
+defaultPlayerName: demo-yh-champion-java
+
+fallback:
+  maxNoProgressRounds: 40
+  afterFocusFailed: RETURN_TO_DELIVERY
+
+recommendedOpponents:
+  - D07-task-farmer
+  - D15-draw-denier
+  - D19-rush-finisher
+  - D20-grandmaster-hybrid
+
+expectedEvents:
+  - DELIVER_SUCCESS
+  - TASK_COMPLETE
+  - RESOURCE_CLAIM_SUCCESS
+  - WINDOW_CONTEST_START
+  - RUSH_TACTIC_USE
+
+mustFinish: true
+knownLimitations:
+  - 当前版本仍是启发式策略，不读取隐藏 seed，也不使用离线 replay 反推服务端内部状态
+  - 深度搜索会显著增加维护成本，暂不引入
